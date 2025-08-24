@@ -1,0 +1,19 @@
+import express from "express";
+import cors from "cors";
+import authRouter from "./routes/auth"
+import billingRouter from "./routes/billing"
+import razrpay_webhook from "./routes/razrpay_webhook"
+
+const app = express()
+
+app.use(cors())
+
+app.use(express.json())
+
+app.use("/api/auth", authRouter)
+app.use("/api/billing", billingRouter)
+app.use("/api/razrpay_webhook", razrpay_webhook)
+
+app.listen(3000, () => {
+    console.log("Server is running on port 3000");
+});

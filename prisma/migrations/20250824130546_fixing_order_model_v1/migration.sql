@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "public"."Order" ALTER COLUMN "amount" SET DATA TYPE DOUBLE PRECISION;
