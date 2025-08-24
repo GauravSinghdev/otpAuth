@@ -39,6 +39,7 @@ router.post("/ini-subscribe", authMiddleware, async (req, res) => {
       amount: order.amount,
       currency: order.currency,
       dbOrderId: newOrder.id,
+      razorpayKey: process.env.RZP_KEY
     });
   } catch (error) {
     console.error(error);
