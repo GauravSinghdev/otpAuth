@@ -19,6 +19,7 @@ router.post("/ini-subscribe", authMiddleware, async (req, res) => {
       amount: 99 * 100,
       currency: "INR",
       receipt: `receipt-${Date.now()}`,
+      payment_capture: true,
       notes: {
         productId: "random-product_id",
       },
