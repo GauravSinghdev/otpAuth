@@ -9,7 +9,8 @@
   },
   "scripts": {
     "dev": "bun --hot index.ts",
-    "start": "bun index.ts"
+    "start": "bun index.ts",
+    "postinstall": "bunx prisma generate"
   },
   "peerDependencies": {
     "typescript": "^5"
